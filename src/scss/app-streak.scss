@@ -1,0 +1,146 @@
+
+// athletes page
+.h-screen{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.hero-slide{
+    .slide-bg-img{
+        // width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto !important;
+
+        @media screen and (max-width: 767px) {
+            object-position: 70% 50%;
+        }
+    }
+}
+
+
+.slide-for-desktop{
+    display: block;
+    @media screen and (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.slide-for-mob{
+    display: none !important;
+    @media screen and (max-width: 767px) {
+        display: block !important;
+    }
+}
+
+.slide-box{
+    position: absolute;
+    z-index: 9;
+    bottom: 5%;
+    width: 85%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+
+    @media screen and (min-width: 1400px) {
+      bottom: 15%;
+    }
+
+    @media screen and (max-width: 991px) {
+        .max-w-sm{
+            padding-left: 25px;
+        }
+    }
+
+    @media screen and (max-width:767px){
+        width: 90%;
+    }
+
+    h2{
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.13px;
+        font-weight: 300;
+        margin-bottom: 20px;
+
+        @media screen and (max-width:767px){
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.05px;
+        }
+    }
+    p{
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0.55px;
+        font-weight: 300;
+        color: #B5B3B1;
+        text-shadow: 0px 1px 2px #00000015;
+        margin-bottom: 20px;
+    }
+}
+
+.hero-slide{
+    .slide-box{
+        h2{
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: -0.34px;
+
+            @media screen and (max-width:767px){
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.13px;
+            }
+        }
+        p{
+            font-size: 17px;
+            line-height: 28px;
+            letter-spacing: 0.34px;
+            color: #D4D2CF;
+            @media screen and (max-width:767px){
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+
+        .hero-cta {
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.55px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.form-slide{
+    p > a{
+        transition: 0.4s all ease-in-out;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and (max-width: 991px){
+        overflow-y: auto;
+        height: 1200px;
+    }
+
+    .slide-box{
+        @media screen and (min-width: 991px){
+            flex-direction: row;
+        }
+    }
+}
+
+// END athletes page
+
+.cta-mobile{
+    display: none;
+    @media screen and (max-width: 767px){
+        display: inline-block;
+    }
+}

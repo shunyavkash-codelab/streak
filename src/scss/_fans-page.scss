@@ -1,0 +1,49 @@
+.fans-page {
+    .hero-buttons{
+        margin-top: 40px;
+        .btn-text{
+            margin-left: 20px;
+            transition: 0.4s all ease-in-out;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            @media screen and (max-width:767px){
+                font-size: 13px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .list-group-number{
+        margin: 20px 0px 20px;
+        color: #D4D2CF;
+        font-size: 13px;
+
+
+        li{
+            padding-left: 30px;
+            background-image: url(../images/icons/diamond.svg);
+            background-repeat: no-repeat;
+            background-position: left top 3px;
+            background-size: 20px;
+            line-height: 28px;
+            font-style: italic;
+        }
+    }
+
+    .hero-cta{
+        letter-spacing: 0.55px;
+        margin-top: 40px;
+        font-weight: 400;
+    }
+}
+
+.grid-cols-2{
+    display: grid;
+    
+    @media screen and (min-width:767px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));    
+    }
+}

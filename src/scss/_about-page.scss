@@ -1,0 +1,76 @@
+.about-page {
+    .hero-slide .slide-bg-img{
+        margin-right: 0px !important;
+    }
+
+    // .theme-slide .slide-bg-img{
+    //     @media screen and (max-width:767px) {
+    //         display: none !important;
+    //     }
+    // }
+}
+
+.investors-slide,
+.footer-slide{
+    .slide-content-box {
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+}
+
+.investors-slide{
+    .slide-box{
+        bottom: 0px;
+    } 
+    .investor-info{
+        padding: 50px 0px;
+        position: relative;
+        @media screen and (max-width: 767px) {
+            padding: 40px 0px;
+        }
+
+        &:not(:last-child):after{
+            content: " ";
+            background: #171716;
+            height: 1px;
+            width: 180px;
+            max-width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+
+        img{
+            margin-bottom: 40px;
+            
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.footer-slide{
+    .slide-box p{
+        font-size: 13px;
+    }
+
+    .footer-links{
+        li{
+            margin-top: 80px;
+            @media screen and (max-width: 767px) {
+                margin-top: 40px;
+            }
+
+            a{
+                font-size: 13px;
+                line-height: 20px;
+                letter-spacing: 0.89px;
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+        } 
+    }
+}

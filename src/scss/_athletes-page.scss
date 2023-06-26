@@ -1,0 +1,284 @@
+.dark-page {
+  background-color: $black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: $white;
+
+
+  @media screen and (max-width: 767px) {
+    min-height: 100vh;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+.theme-peralex{
+  background-attachment: fixed;
+  &.home-page{
+    background-image: url("../images/landing/home-globle-banner.png") !important;
+  }
+  &.about-page{
+    background-image: url("../images/about-us/about-us-bg.png") !important;
+  }
+  &.athletes-page{
+    background-image: url("../images/athletes-new/athletes-slide.png");
+  }
+
+  @media screen and (max-width: 767px) {
+    &.home-page{
+      background-position: center right 40%;
+    }
+    &.about-page{
+      background-position: center right -200px;
+    }
+    &.athletes-page{
+      background-image: url("../images/athletes-new/athletes-slide-mobile.png");
+    }
+  }
+}
+
+
+.bg-cloud {
+  position: relative;
+  background: #000000;
+  height: 100%;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("../images/cloud.png");
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0px;
+
+  @media screen and (max-width: 767px) {
+    position: static;
+  }
+
+  .section-wall-image {
+    height: 100vh;
+    margin: 0 auto 0 0;
+    display: block;
+    object-fit: cover;
+  }
+
+  .hero-banner-content {
+    position: absolute;
+    z-index: 9;
+    bottom: 10%;
+    width: 85%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (min-width: 1400px) {
+      bottom: 15%;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .hero-title {
+      flex-shrink: 0;
+      padding-right: 30px;
+      margin-bottom: 30px;
+
+      @media (min-width: 768px) and (max-width: 990px) {
+        width: 360px;
+      }
+
+      // @media screen and (min-width: 991px) {
+      //   width: 500px;
+      // }
+    }
+
+    .hero-content {
+      flex-grow: 1;
+      max-width: 440px;
+      padding-left: 65px;
+
+      @media screen and (min-width: 990px) {
+        max-width: 440px;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding-left: 35px;
+      }
+    }
+  }
+}
+
+
+
+.bg-left-cloud {
+  position: relative;
+  height: 100%;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("../images/left-cloud.png");
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.4;
+  }
+}
+
+
+
+.athletes-page{
+  .theme-content-box:not(:first-child){
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #FFFFFF14;
+  }
+}
+
+.section-three{
+  @media screen and (max-width: 767px) {
+    .bg-cloud:before{
+      background-position: center;
+    }
+  }
+}
+.section-four {
+    .bg-cloud:before{
+      opacity: 0.6;
+    }
+}
+
+
+.livestrem-slider{
+  @media screen and (min-width: 991px) {
+    .slick-slide{
+      max-width: 450px;
+
+      & + .slick-slide{
+        border-left: 1px solid #ffffff10;
+      }
+    }
+    .slick-track{
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .slick-arrow{
+      width: 60px;
+      top: auto;
+      bottom: -45px;
+
+      &.slick-prev{
+        left:0px;
+        display: none !important;
+      }
+      &.slick-next{
+        right:0px;
+      }
+
+      &::before{
+        display: none;
+      }
+
+    }
+  }
+}
+
+
+
+// new design css
+.athletes-page{
+  .theme-slides{
+    @media screen and (max-width: 767px) {
+      height: 100%;
+      min-height: 100vh;
+    }
+  }
+
+  .theme-slide-content-box{
+    @media screen and (max-width: 767px) {
+      position: static;
+      padding-bottom: 40px;
+    }
+  }
+
+  .section-two-portrait {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 100px;
+      text-align: right;
+      display: flex;
+      justify-content: end;
+      flex-direction: row-reverse;
+
+      @media screen and (max-width: 767px) {
+        padding-top: 60px;
+        flex-wrap: wrap;
+      }
+  }
+  .athlete-portrait-box{
+    max-width: 480px;
+    max-height: 645px;  
+    width: 100%;
+    @media screen and (max-width: 767px) {
+      max-width: 70%;
+      max-height: 400px;  
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) and (max-width: 1400px) {
+      max-width: 330px;
+      max-height: 420px;
+    }
+    @media (min-width: 1401px) and (max-width: 1600px) {
+      max-width: 360px;
+      max-height: 480px;
+    }
+
+    img{
+      object-fit: cover;
+    }
+
+    &:first-child {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    &:last-child {
+      margin-top: 120px;
+      transform: translateX(30px);
+      @media screen and (max-width: 767px) {
+        margin-top: 00px;
+        transform: translate(-60px, -70px);
+      }
+    }
+
+  }
+}
